@@ -34,7 +34,7 @@ const formatConfig = (config) => {
         name: '${config.chainName}',
         tokens: [
             ${config.tokens
-              .map((token) => `'${token.address}', // ${token.name}`)
+              .map((token) => `'${token.address}', // ${token.symbol}`)
               .join(",\n            ")}
         ],
         holders: [
