@@ -17,6 +17,7 @@ const tokensConfig = symbiosis.config.chains
   }));
 
 console.log(
+  "---Tokens Config--- \n",
   tokensConfig.map((chain) => ({
     name: chain.chainName,
     chainId: chain.chainId,
@@ -47,3 +48,5 @@ const formatConfig = (config) => {
 };
 
 fs.writeFileSync("config.js", formatConfig(tokensConfig), "utf8");
+
+console.log("---Done---");
