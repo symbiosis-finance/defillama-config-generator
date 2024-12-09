@@ -1,6 +1,6 @@
 # Symbiosis Defi Lama Adapter generator
 
-<img src="https://avatars.githubusercontent.com/u/82048198?v=4" alt="defillama" width="100" style="display: block; margin-left: auto; margin-right: auto;" />
+<img src="https://avatars.githubusercontent.com/u/82048198?v=4" alt="defillama" width="300" style="display: block; margin-left: auto; margin-right: auto;" />
 
 1. Install dependencies
 
