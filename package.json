@@ -1,8 +1,8 @@
 {
-  "name": "sis-defi-lama-util",
+  "name": "defillama-config-generator",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node src/index.js"
   },
   "dependencies": {
     "ethers": "^5.7.2",

@@ -1,15 +1,10 @@
-import {
-  getTonTokenAddress,
-  isTonChainId,
-  isTronChainId,
-  Symbiosis,
-} from 'symbiosis-js-sdk';
+import { getTonTokenAddress, isTonChainId, isTronChainId, Symbiosis } from 'symbiosis-js-sdk';
 import fs from 'fs';
 import TronWeb from 'tronweb';
 
 import { BOBA_BNB, CHAINS_DEFILAMA, ZERO_ADDRESS } from './constants.js';
 
-const symbiosis = new Symbiosis('mainnet', 'defi-lama');
+const symbiosis = new Symbiosis('mainnet', 'defillama');
 
 const tokens = symbiosis.tokens();
 
@@ -24,12 +19,12 @@ const tokensConfig = symbiosis.config.chains
     if (isTronChain) {
       chainTokens = chainTokens.map((token) => ({
         ...token,
-        address: TronWeb.address.fromHex(token.address),
+        address: TronWeb.address.fromHex(token.address)
       }));
     } else if (isTonChain) {
       chainTokens = chainTokens.map((token) => ({
         ...token,
-        address: getTonTokenAddress(token.address),
+        address: getTonTokenAddress(token.address)
       }));
     }
 
@@ -45,7 +40,7 @@ const tokensConfig = symbiosis.config.chains
       chainId: chain.id,
       portal: portalAddress,
       chainName: CHAINS_DEFILAMA[chain.id],
-      tokens: chainTokens,
+      tokens: chainTokens
     };
   });
 
@@ -53,7 +48,7 @@ console.log(
   '---Tokens Config--- \n',
   tokensConfig.map((chain) => ({
     name: chain.chainName,
-    chainId: chain.chainId,
+    chainId: chain.chainId
   })),
   '\n\n---BOBA_BNB--- \n',
   BOBA_BNB
@@ -64,26 +59,26 @@ const formatConfig = (config) => {
   return `module.exports = {
     chains: [
       ${config
-        .map(
-          (config) => `{
+    .map(
+      (config) => `{
           name: '${config.chainName}',
           tokens: [
             ${[...new Set(config.tokens.map((token) => token.address))]
-              .map((tokenAddress) => {
-                const token = config.tokens.find(
-                  (token) => token.address === tokenAddress
-                );
+        .map((tokenAddress) => {
+          const token = config.tokens.find(
+            (token) => token.address === tokenAddress
+          );
 
-                return `'${tokenAddress}', // ${token.symbol}`;
-              })
-              .join(',\n            ')}
+          return `'${tokenAddress}', // ${token.symbol}`;
+        })
+        .join(',\n            ')}
           ],
           holders: [
-              '${config.portal}' // portal v2 address
+              '${config.portal}' // portal
           ]
       }`
-        )
-        .join(',\n      ')}
+    )
+    .join(',\n      ')}
     ]
   }`;
 };
