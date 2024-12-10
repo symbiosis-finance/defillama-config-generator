@@ -41,6 +41,7 @@ export const CHAINS_DEFILAMA = {
   [ChainId.BSQUARED_MAINNET]: 'bsquared',
   [ChainId.CRONOS_ZK_MAINNET]: 'cronos_zkevm',
   [ChainId.MORPH_MAINNET]: 'morph',
+  [ChainId.TON_MAINNET]: 'ton',
 };
 
 export const BOBA_BNB = {

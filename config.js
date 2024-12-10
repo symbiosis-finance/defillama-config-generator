@@ -179,10 +179,10 @@ module.exports = {
       {
           name: 'tron',
           tokens: [
-            '0xa614f803b6fd780986a42c78ec9c7f77e6ded13c', // USDT
+            'TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t', // USDT
           ],
           holders: [
-              '0xd83b5752b42856a08087748de6095af0be52d299' // portal v2 address
+              'TVgY3ayqTGUoe7th84ZNL5peVfRNdLFDjf' // portal v2 address
           ]
       },
       {
@@ -349,6 +349,18 @@ module.exports = {
           ],
           holders: [
               '0x292fC50e4eB66C3f6514b9E402dBc25961824D62' // portal v2 address
+          ]
+      },
+      {
+          name: 'ton',
+          tokens: [
+            'EQD8AErK5HbmnftlHQuk8bXC_JuX1COLPeNIfMriw23gfO3I', // TON,
+            'EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs', // USDT,
+            'EQBh9XACT0B60U8Q48VnjyqCxzxpM4oA0c8rqKt4h70yk1V5', // UXLINK,
+            'EQD-cvR0Nz6XAyRBvbhz-abTrRC6sI5tvHvvpeQraV9UAAD7', // CATI
+          ],
+          holders: [
+              'EQDpUHhVl5lJ6Y47DCd0TWdXB_kd-U-N6KyAELePNjfj15HT' // portal v2 address
           ]
       },
       {

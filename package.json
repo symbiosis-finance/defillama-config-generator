@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "ethers": "^5.7.2",
-    "symbiosis-js-sdk": "^3.4.26"
+    "symbiosis-js-sdk": "^3.4.26",
+    "tronweb": "^5.3.0"
   }
 }
