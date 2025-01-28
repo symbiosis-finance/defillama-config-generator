@@ -44,6 +44,7 @@ export const CHAINS_DEFILAMA = {
   [ChainId.TON_MAINNET]: 'ton',
   [ChainId.GOAT_MAINNET]: 'goat',
   [ChainId.SONIC_MAINNET]: 'sonic',
+  [ChainId.ABSTRACT_MAINNET]: 'abstract',
 };
 
 export const BOBA_BNB = {
