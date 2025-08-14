@@ -2,7 +2,7 @@ import { isTonChainId, isTronChainId, Symbiosis } from 'symbiosis-js-sdk';
 import fs from 'fs';
 import TronWeb from 'tronweb';
 
-import { BOBA_BNB, CHAINS_DEFILAMA, ZERO_ADDRESS } from './constants.js';
+import { SYMBIOSIS_MAINNET, CHAINS_DEFILAMA, ZERO_ADDRESS } from './constants.js';
 
 const symbiosis = new Symbiosis('mainnet', 'defillama');
 
@@ -50,8 +50,8 @@ console.log(
     name: chain.chainName,
     chainId: chain.chainId
   })),
-  '\n\n---BOBA_BNB--- \n',
-  BOBA_BNB
+  '\n\n---SYMBIOSIS_MAINNET--- \n',
+  SYMBIOSIS_MAINNET
 );
 
 // Format the config into a string with comments
@@ -85,7 +85,7 @@ const formatConfig = (config) => {
 
 fs.writeFileSync(
   'config.js',
-  formatConfig([...tokensConfig, BOBA_BNB]),
+  formatConfig([...tokensConfig, SYMBIOSIS_MAINNET]),
   'utf8'
 );
 

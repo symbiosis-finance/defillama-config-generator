@@ -11,7 +11,7 @@ export const CHAINS_DEFILAMA = {
   [ChainId.AURORA_MAINNET]: 'aurora',
   [ChainId.BOBA_MAINNET]: 'boba',
   [ChainId.BOBA_AVALANCHE]: 'boba_avax',
-  [ChainId.BOBA_BNB]: 'boba_bnb',
+  [ChainId.SYMBIOSIS_MAINNET]: 'symbiosis',
   [ChainId.KAVA_MAINNET]: 'kava',
   [ChainId.ZKSYNC_MAINNET]: 'era',
   [ChainId.ARBITRUM_MAINNET]: 'arbitrum',
@@ -51,17 +51,18 @@ export const CHAINS_DEFILAMA = {
   [ChainId.SONEIUM_MAINNET]: 'soneium',
   [ChainId.OPBNB_MAINNET]: 'op_bnb',
   [ChainId.HYPERLIQUID_MAINNET]: 'hyperliquid',
+  [ChainId.KATANA_MAINNET]: 'katana',
 };
 
-export const BOBA_BNB = {
-  chainName: 'boba_bnb',
+export const SYMBIOSIS_MAINNET = {
+  chainName: 'symbiosis',
   tokens: [
     {
-      symbol: 'USDC',
-      address: '0x9f98f9f312d23d078061962837042b8918e6aff2',
+      symbol: 'WSIS',
+      address: '0xd8db4fb1fEf63045A443202d506Bcf30ef404160',
     },
   ],
   portal: [
-    '0x6148FD6C649866596C3d8a971fC313E5eCE84882', // pool v2
+    '0x3E6A3EbbC9D88ACC192221797ad90BF72d391778', // pool v2
   ],
 };

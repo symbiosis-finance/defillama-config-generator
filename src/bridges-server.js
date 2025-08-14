@@ -1,11 +1,11 @@
-import { isBtcChainId, isEvmChainId, isTonChainId, isTronChainId, Symbiosis } from 'symbiosis-js-sdk';
+import { isBtcChainId, isEvmChainId, isSolanaChainId, isTonChainId, isTronChainId, Symbiosis } from 'symbiosis-js-sdk';
 import fs from 'fs';
 
 const symbiosis = new Symbiosis('mainnet', 'defillama');
 
 const config = symbiosis.config.chains.map((chainConfig) => {
   const { synthesis, portal, id } = chainConfig;
-  if (isTonChainId(id) || isBtcChainId(id)) {
+  if (isTonChainId(id) || isBtcChainId(id) || isSolanaChainId(id)) {
     return;
   }
   return {
