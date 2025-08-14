@@ -1,4 +1,4 @@
-import { getTonTokenAddress, isTonChainId, isTronChainId, Symbiosis } from 'symbiosis-js-sdk';
+import { isTonChainId, isTronChainId, Symbiosis } from 'symbiosis-js-sdk';
 import fs from 'fs';
 import TronWeb from 'tronweb';
 
@@ -24,7 +24,7 @@ const tokensConfig = symbiosis.config.chains
     } else if (isTonChain) {
       chainTokens = chainTokens.map((token) => ({
         ...token,
-        address: getTonTokenAddress(token.address)
+        address: token.tonAddress
       }));
     }
 

@@ -47,6 +47,10 @@ export const CHAINS_DEFILAMA = {
   [ChainId.ABSTRACT_MAINNET]: 'abstract',
   [ChainId.GNOSIS_MAINNET]: 'xdai',
   [ChainId.BERACHAIN_MAINNET]: 'berachain',
+  [ChainId.UNICHAIN_MAINNET]: 'unichain',
+  [ChainId.SONEIUM_MAINNET]: 'soneium',
+  [ChainId.OPBNB_MAINNET]: 'op_bnb',
+  [ChainId.HYPERLIQUID_MAINNET]: 'hyperliquid',
 };
 
 export const BOBA_BNB = {
