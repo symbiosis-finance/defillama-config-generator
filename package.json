@@ -6,7 +6,7 @@
     "bridges-server": "node src/bridges-server.js"
   },
   "dependencies": {
-    "ethers": "^5.7.2",
+    "ethers": "^5.8.0",
     "symbiosis-js-sdk": "3.5.26",
     "tronweb": "^5.3.0"
   }
