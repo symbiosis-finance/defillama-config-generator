@@ -1,8 +1,8 @@
-import { isTonChainId, isTronChainId, Symbiosis } from 'symbiosis-js-sdk';
+import { ChainId, isTonChainId, isTronChainId, Symbiosis } from 'symbiosis-js-sdk';
 import fs from 'fs';
 import TronWeb from 'tronweb';
 
-import { SYMBIOSIS_MAINNET, CHAINS_DEFILAMA, ZERO_ADDRESS } from './constants.js';
+import { CHAINS_DEFILLAMA, ZERO_ADDRESS } from './constants.js';
 
 const symbiosis = new Symbiosis('mainnet', 'defillama');
 
@@ -10,6 +10,7 @@ const tokens = symbiosis.tokens();
 
 const tokensConfig = symbiosis.config.chains
   .filter((chain) => chain.portal !== ZERO_ADDRESS || !!chain.tonPortal)
+  .filter((chain) => chain.id !== ChainId.SYMBIOSIS_MAINNET)
   .map((chain) => {
     const isTronChain = isTronChainId(chain.id);
     const isTonChain = isTonChainId(chain.id);
@@ -39,7 +40,7 @@ const tokensConfig = symbiosis.config.chains
     return {
       chainId: chain.id,
       portal: portalAddress,
-      chainName: CHAINS_DEFILAMA[chain.id],
+      chainName: CHAINS_DEFILLAMA[chain.id],
       tokens: chainTokens
     };
   });
@@ -49,9 +50,7 @@ console.log(
   tokensConfig.map((chain) => ({
     name: chain.chainName,
     chainId: chain.chainId
-  })),
-  '\n\n---SYMBIOSIS_MAINNET--- \n',
-  SYMBIOSIS_MAINNET
+  }))
 );
 
 // Format the config into a string with comments
@@ -85,7 +84,7 @@ const formatConfig = (config) => {
 
 fs.writeFileSync(
   'config.js',
-  formatConfig([...tokensConfig, SYMBIOSIS_MAINNET]),
+  formatConfig(tokensConfig),
   'utf8'
 );
 

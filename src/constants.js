@@ -2,7 +2,7 @@ import { ChainId } from 'symbiosis-js-sdk';
 
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
 
-export const CHAINS_DEFILAMA = {
+export const CHAINS_DEFILLAMA = {
   [ChainId.ETH_MAINNET]: 'ethereum',
   [ChainId.BSC_MAINNET]: 'bsc',
   [ChainId.AVAX_MAINNET]: 'avax',
@@ -52,17 +52,6 @@ export const CHAINS_DEFILAMA = {
   [ChainId.OPBNB_MAINNET]: 'op_bnb',
   [ChainId.HYPERLIQUID_MAINNET]: 'hyperliquid',
   [ChainId.KATANA_MAINNET]: 'katana',
-};
-
-export const SYMBIOSIS_MAINNET = {
-  chainName: 'symbiosis',
-  tokens: [
-    {
-      symbol: 'WSIS',
-      address: '0xd8db4fb1fEf63045A443202d506Bcf30ef404160',
-    },
-  ],
-  portal: [
-    '0x3E6A3EbbC9D88ACC192221797ad90BF72d391778', // pool v2
-  ],
+  [ChainId.APECHAIN_MAINNET]: 'apechain',
+  [ChainId.PLASMA_MAINNET]: 'plasma',
 };
