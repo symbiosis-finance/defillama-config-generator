@@ -1,6 +1,3 @@
 node_modules
-config.js
-bridges-server.json
-dune.sql
 types
-fees.txt
+data

@@ -58,7 +58,7 @@ async function main() {
 
 
   fs.writeFileSync(
-    'fees.txt',
+    'data/fees.txt',
     data.join('\n'),
     'utf8'
   );

@@ -2,7 +2,7 @@ import { ChainId, isTonChainId, isTronChainId, Symbiosis } from 'symbiosis-js-sd
 import fs from 'fs';
 import TronWeb from 'tronweb';
 
-import { CHAINS_DEFILLAMA, ZERO_ADDRESS } from './constants.js';
+import { CHAINS_DEFILLAMA, ZERO_ADDRESS } from './constants';
 
 const symbiosis = new Symbiosis('mainnet', 'defillama');
 
@@ -83,7 +83,7 @@ const formatConfig = (config) => {
 };
 
 fs.writeFileSync(
-  'config.js',
+  'data/defillama-tvl.js',
   formatConfig(tokensConfig),
   'utf8'
 );

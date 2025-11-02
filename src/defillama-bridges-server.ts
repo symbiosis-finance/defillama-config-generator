@@ -16,7 +16,7 @@ const config = symbiosis.config.chains.map((chainConfig) => {
 }).filter(Boolean);
 
 fs.writeFileSync(
-  'bridges-server.json',
+  'data/defillama-bridges-server.json',
   JSON.stringify(config),
   'utf8'
 );

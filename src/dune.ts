@@ -93,7 +93,7 @@ const query = `
     ORDER BY block_time desc`;
 
 fs.writeFileSync(
-  'dune.sql',
+  'data/dune.sql',
   query,
   'utf8'
 );
