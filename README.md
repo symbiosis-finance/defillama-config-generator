@@ -1,19 +1,18 @@
-# Symbiosis DefiLlama Config generator
+# Configs generator
 
-<img src="https://avatars.githubusercontent.com/u/82048198?v=4" alt="defillama" width="300" style="display: block; margin-left: auto; margin-right: auto;" />
-
-1. Install dependencies
+### Install dependencies
 
 ```
-npm install
+bun install
 ```
 
-2. Run the script
+### Run a script
 
+For example
 ```
-npm start
+bun defillama-tvl
 ```
 
-3. The script will generate a `config.js` file in the current directory.
+The script will generate a `data/defillama-tvl.js`.
 
-4. Copy the generated `config.js` file to the [`DefiLlama-Adapters`](https://github.com/symbiosis-finance/DefiLlama-Adapters/blob/main/projects/symbiosis-finance/config.js) repository.
+Copy the generated `defillama-tvl.js` file to the [`DefiLlama-Adapters`](https://github.com/symbiosis-finance/DefiLlama-Adapters/blob/main/projects/symbiosis-finance/config.js) repository.
